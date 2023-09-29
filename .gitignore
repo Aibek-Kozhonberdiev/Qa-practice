@@ -9,8 +9,10 @@ db.sqlite3
 media/
 __pycache__/
 
+
 # Parser
 parser
+index_test.html
 
 
 # Pycharm
