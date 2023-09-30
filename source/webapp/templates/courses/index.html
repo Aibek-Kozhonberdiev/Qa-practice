@@ -247,115 +247,45 @@
 
   <div class="flex">
 
+    {% if datasets %}
 
+    {% for dataset in datasets %}
 
     <div class="col">
       <div class="card border-radius py-40 px-40 text-center">
         <div class="card-icon mb-20">
           <div class="card-icon-wrapper  border-radius_full">
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width="60" height="60" aria-hidden="true"><g id="User Circle1_layer"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"></path></g></svg>
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width="60" height="60" aria-hidden="true"><g id="User Circle1_layer">
+              <path d="{{ dataset.image }}">
+              </path></g></svg>
           </div>
         </div>
         <div>
           <h3 class="h4 card-title font-size-30">
-            Команда Менторов
+            {{ dataset.title }}
           </h3>
           <div class="card-title-line"></div>
         </div>
         <div class="card-text">
-          <p>Успешно сдавшие USMLE преподаватели, практикующие резиденты США обучат и покажут вам дорогу</p>
+          <p>{{ dataset.content }}</p>
         </div>
         <div class="mt-30 ">
-          <a class="button-outline" href="https://484997.hs-sites.com/thrifty/sectors/professional-services">
+          <a class="button-outline" href="{{ dataset.link }}">
             Read more
           </a>
         </div>
       </div>
     </div>
 
-    <div class="col">
-      <div class="card border-radius py-40 px-40 text-center">
+    {% endfor %}
 
+    {% else %}
 
-        <div class="card-icon mb-20">
-          <div class="card-icon-wrapper  border-radius_full">
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="60" height="60" aria-hidden="true"><g id="Plus Circle2_layer"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"></path></g></svg>
-          </div>
-        </div>
+    <h3 class="h4 card-title font-size-30">
+      На данный момент пусто
+    </h3>
 
-
-
-        <div>
-          <h3 class="h4 card-title font-size-30">
-            Общество развития Медиков
-          </h3>
-          <div class="card-title-line"></div>
-        </div>
-
-
-        <div class="card-text">
-          <p>Познакомитесь с кругом новых единомышленников, в тяжелом обучении всегда легче с другом, от первокурсников до опытных врачей</p>
-        </div>
-
-
-
-        <div class="mt-30 ">
-
-
-
-
-
-          <a class="button-outline" href="https://484997.hs-sites.com/thrifty/sectors/health-and-beauty">
-            Read more
-
-
-          </a>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card border-radius py-40 px-40 text-center">
-
-
-        <div class="card-icon mb-20">
-          <div class="card-icon-wrapper  border-radius_full">
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="60" height="60" aria-hidden="true"><g id="Check Circle3_layer"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></g></svg>
-          </div>
-        </div>
-
-
-
-        <div>
-          <h3 class="h4 card-title font-size-30">
-            Поднимите себя до мирового стандарта
-          </h3>
-          <div class="card-title-line"></div>
-        </div>
-
-
-        <div class="card-text">
-          <p>Готовьтесь к самому сложному экзамену по медицине в мире чтобы соответствовать высшему уровню профессионализма</p>
-        </div>
-
-
-
-        <div class="mt-30 ">
-
-
-
-
-
-          <a class="button-outline" href="https://484997.hs-sites.com/thrifty/sectors/nonprofit-and-education">
-            Read more
-
-
-          </a>
-        </div>
-
-      </div>
-    </div>
+    {% endif %}
 
   </div>
 
@@ -399,86 +329,37 @@
   
 
   <div class="flex" id="counter-dnd_area-module-5">
-    
+
+    {% if statistics %}
+
+    {% for statistic in statistics %}
+
     <div class="col">
       <div class="card border-radius py-40 px-40 text-center">
         <div class="card-body">
           
           <div class="secondary-color mb-10 line-height-12 font-weight-800 font-size-40">
-            <span class="card-number primary-font">150</span>
+            <span class="card-number primary-font">{{ statistic.numbers }}</span>
             
             <span class="card-number-suffix primary-font">+</span>
             
           </div>
           
-          
           <div class="card-content">
-            <p style="font-size: 18px;">Довольных учеников</p>
+            <p style="font-size: 18px;">{{ statistic.title }}</p>
           </div>
           
         </div>
       </div>
     </div>
-    
-    <div class="col">
-      <div class="card border-radius py-40 px-40 text-center">
-        <div class="card-body">
-          
-          <div class="secondary-color mb-10 line-height-12 font-weight-800 font-size-40">
-            <span class="card-number primary-font">219</span>
-            
-            <span class="card-number-suffix primary-font">+</span>
-            
-          </div>
-          
-          
-          <div class="card-content">
-            <p style="font-size: 18px;">Готовятся вместе</p>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-    
-    <div class="col">
-      <div class="card border-radius py-40 px-40 text-center">
-        <div class="card-body">
-          
-          <div class="secondary-color mb-10 line-height-12 font-weight-800 font-size-40">
-            <span class="card-number primary-font">27</span>
-            
-            <span class="card-number-suffix primary-font">+</span>
-            
-          </div>
-          
-          
-          <div class="card-content">
-            <p style="font-size: 18px;">Сдавших с нами</p>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-    
-    <div class="col">
-      <div class="card border-radius py-40 px-40 text-center">
-        <div class="card-body">
-          
-          <div class="secondary-color mb-10 line-height-12 font-weight-800 font-size-40">
-            <span class="card-number primary-font">4</span>
-            
-            <span class="card-number-suffix primary-font">+</span>
-            
-          </div>
-          
-          
-          <div class="card-content">
-            <p style="font-size: 18px;">На данный момент резидента США</p>
-          </div>
-          
-        </div>
-      </div>
-    </div>
+
+    {% endfor %}
+
+    {% else %}
+
+    <p style="font-size: 18px;">На данный момент пусто</p>
+
+    {% endif %}
     
   </div>
 
@@ -521,16 +402,19 @@
   
 
   <div class="flex">
-    
+
+    {% if mentors %}
+
+    {% for mentor in mentors %}
+
     <div class="col">
-      <a href="https://www.hubsnacks.com/">
+      <a href="{{ mentor.link }}">
         <div class="card border-radius p-40 text-center">
 
           <div class="card-image border-radius">
 
-            <img src="{% static 'img/1693830946802.jpg' %}" alt="1693830946802" loading="lazy" width="4667" height="7000" srcset="https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/1693830946802.jpg?width=2334&amp;height=3500&amp;name=1693830946802.jpg 2334w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/1693830946802.jpg?width=4667&amp;height=7000&amp;name=1693830946802.jpg 4667w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/1693830946802.jpg?width=7001&amp;height=10500&amp;name=1693830946802.jpg 7001w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/1693830946802.jpg?width=9334&amp;height=14000&amp;name=1693830946802.jpg 9334w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/1693830946802.jpg?width=11668&amp;height=17500&amp;name=1693830946802.jpg 11668w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/1693830946802.jpg?width=14001&amp;height=21000&amp;name=1693830946802.jpg 14001w" sizes="(max-width: 4667px) 100vw, 4667px">
+            <img src="{{ mentor.img.url }}" alt="1693830946802" loading="lazy" width="4667" height="7000" srcset="https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/1693830946802.jpg?width=2334&amp;height=3500&amp;name=1693830946802.jpg 2334w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/1693830946802.jpg?width=4667&amp;height=7000&amp;name=1693830946802.jpg 4667w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/1693830946802.jpg?width=7001&amp;height=10500&amp;name=1693830946802.jpg 7001w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/1693830946802.jpg?width=9334&amp;height=14000&amp;name=1693830946802.jpg 9334w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/1693830946802.jpg?width=11668&amp;height=17500&amp;name=1693830946802.jpg 11668w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/1693830946802.jpg?width=14001&amp;height=21000&amp;name=1693830946802.jpg 14001w" sizes="(max-width: 4667px) 100vw, 4667px">
           </div>
-
 
           <div class="pt-40">
 
@@ -538,74 +422,33 @@
               <div class="card-tagline secondary-color">Курсы</div>
             </div>
 
-
             <div class="mb-10">
               <h3 class="h3 card-title font-size-0">
-                Аман Базаров
+                {{ mentor.full_name }}
               </h3>
               <div class="card-title-line"></div>
             </div>
 
-
             <div class="card-text">
-              <p>USMLE Step 1, Step 2</p>
-<p>стажировка США, Окончил с красным дипломом</p>
+              <p>{{ mentor.description }}</p>
+              <p>{{ mentor.description_2 }}</p>
             </div>
-
-
-
-
 
           </div>
         </div>
         </a>
         </div>
 
-    <div class="col">
+    {% endfor %}
 
+    {% else %}
 
+     <h3 class="h3 card-title font-size-0">
+       На данный момент пусто
+     </h3>
 
+    {% endif %}
 
-
-
-
-      <a href="https://www.hubsnacks.com/">
-        <div class="card border-radius p-40 text-center">
-
-          <div class="card-image border-radius">
-
-            <img src="{% static 'img/IMG-20230904-WA0006.jpg' %}" alt="IMG-20230904-WA0006" loading="lazy" width="1280" height="1280" srcset="https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/IMG-20230904-WA0006.jpg?width=640&amp;height=640&amp;name=IMG-20230904-WA0006.jpg 640w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/IMG-20230904-WA0006.jpg?width=1280&amp;height=1280&amp;name=IMG-20230904-WA0006.jpg 1280w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/IMG-20230904-WA0006.jpg?width=1920&amp;height=1920&amp;name=IMG-20230904-WA0006.jpg 1920w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/IMG-20230904-WA0006.jpg?width=2560&amp;height=2560&amp;name=IMG-20230904-WA0006.jpg 2560w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/IMG-20230904-WA0006.jpg?width=3200&amp;height=3200&amp;name=IMG-20230904-WA0006.jpg 3200w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/IMG-20230904-WA0006.jpg?width=3840&amp;height=3840&amp;name=IMG-20230904-WA0006.jpg 3840w" sizes="(max-width: 1280px) 100vw, 1280px">
-          </div>
-
-
-          <div class="pt-40">
-
-            <div class="mb-10">
-              <div class="card-tagline secondary-color">Курсы</div>
-            </div>
-
-
-            <div class="mb-10">
-              <h3 class="h3 card-title font-size-0">
-                Кылым Соодонбеков
-              </h3>
-              <div class="card-title-line"></div>
-            </div>
-
-
-            <div class="card-text">
-              USMLE Step 1, Step 2, преподаватель Ала - Тоо университета, марафонец
-            </div>
-
-
-
-
-
-          </div>
-        </div>
-        </a>
-        </div>
-      
     </div>
 
     
@@ -652,73 +495,68 @@
 
   <div class="flex ">
 
-    
+    {% if courses %}
+
+    {% for course in courses %}
+
     <div class="col">
       <div class="pricing-card box-shadow border-radius p-40 text-center">
         <div class="pricing-card-body light-bg-color border-radius popular card-border p-40">
           
           <div class="pricing-card-badge">
-            
-            <div class="pricing-card-badge-text letter-spacing-1 light-color secondary-bg-color px-10 py-5 h4 border-radius font-size-12">Популярный</div>
-            
-          </div> 
-          
-          
-          <div class="pricing-number secondary-color h4 font-size-18">4.5к сом/ мес.</div>
-          
-          <div class="pricing-description font-size-14 mb-20">
-            <p><span>Подходит для всех желающих обучаться в большом потоке, особенно для студентов .</span></p>
+
+            {% if course.course_type %}
+
+            <div class="pricing-card-badge-text letter-spacing-1 light-color secondary-bg-color px-10 py-5 h4 border-radius font-size-12">{{ course.course_type }}</div>
+
+            {% endif %}
+
           </div>
           
+          <div class="pricing-number secondary-color h4 font-size-18">{{ course.price }}</div>
+          
+          <div class="pricing-description font-size-14 mb-20">
+            <p><span>{{ course.content }}</span></p>
+          </div>
           
           <div class="mb-20">
             <h3 class="card-title mb-20 h3 font-size-30">
-              Standard
+              {{ course.title }}
             </h3>
             <div class="card-title-line"></div>
           </div>
           
           <div class="pricing-features-wrapper">
-            
-            
+
             <div class="pricing-features">
               <span class="pricing-features-text">
-                8 месяцев
+                {{ course.fact_1 }}
               </span>
             </div>
             
-            
-            
             <div class="pricing-features">
               <span class="pricing-features-text">
-                3 раза в неделю
+                {{ course.fact_2 }}
               </span>
             </div>
             
-            
-            
             <div class="pricing-features">
               <span class="pricing-features-text">
-                2 часа в день
+                {{ course.fact_3 }}
               </span>
             </div>
             
-            
-            
             <div class="pricing-features">
               <span class="pricing-features-text">
-                по вечерам
+                {{ course.fact_4 }}
               </span>
             </div>
             
-            
-            
             <div class="pricing-features">
               <span class="pricing-features-text">
-                учеников в одной группе 30+
+                {{ course.fact_5 }}
               </span>
             </div>
-            
             
           </div>
         </div>
@@ -726,11 +564,7 @@
           
           <div class="button-full-width">
             
-            
-            
-            
-            
-            <a class="button" href="https://www.hubsnacks.com/">
+            <a class="button" href="{{ course.link }}">
               Buy Now
                
             </a>
@@ -739,174 +573,16 @@
         </div>
       </div>
     </div>
-    
-    <div class="col">
-      <div class="pricing-card box-shadow border-radius p-40 text-center">
-        <div class="pricing-card-body light-bg-color border-radius popular card-border p-40">
-          
-          <div class="pricing-card-badge">
-            
-            <div class="pricing-card-badge-text letter-spacing-1 light-color secondary-bg-color px-10 py-5 h4 border-radius font-size-12">Быстрый</div>
-            
-          </div> 
-          
-          <div class="pricing-currency secondary-color h4 font-size-18">9.8к сом/мес</div>
-          
-          
-          <div class="pricing-description font-size-14 mb-20">
-            Только ординаторы, врачи и студенты 6 курса
-          </div>
-          
-          
-          <div class="mb-20">
-            <h3 class="card-title mb-20 h3 font-size-30">
-              Iad`s Method
-            </h3>
-            <div class="card-title-line"></div>
-          </div>
-          
-          <div class="pricing-features-wrapper">
-            
-            
-            <div class="pricing-features">
-              <span class="pricing-features-text">
-                4 месяца
-              </span>
-            </div>
-            
-            
-            
-            <div class="pricing-features">
-              <span class="pricing-features-text">
-                6 раз в неделю
-              </span>
-            </div>
-            
-            
-            
-            <div class="pricing-features">
-              <span class="pricing-features-text">
-                3 часа в день
-              </span>
-            </div>
-            
-            
-            
-            <div class="pricing-features">
-              <span class="pricing-features-text">
-                после обеда
-              </span>
-            </div>
-            
-            
-            
-            <div class="pricing-features">
-              <span class="pricing-features-text">
-                учеников 10, ВЫСОКИЙ шанс сдачи ЗА ПОЛГОДА
-              </span>
-            </div>
-            
-            
-          </div>
-        </div>
-        <div class="pricing-card-footer pt-40">
-          
-          <div class="button-full-width">
-            
-            
-            
-            
-            
-            <a class="button" href="https://www.hubsnacks.com/">
-              Buy Now
-               
-            </a>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-    
-    <div class="col">
-      <div class="pricing-card box-shadow border-radius p-40 text-center">
-        <div class="pricing-card-body light-bg-color border-radius  card-border p-40">
-          
-          <div class="pricing-currency secondary-color h4 font-size-18">4к сом/мес или 15к сом за 8 месяцев</div>
-          
-          
-          <div class="pricing-description font-size-14 mb-20">
-            <p><span>Для тех кто не может найти время, а на курсы так хочется.</span></p>
-          </div>
-          
-          
-          <div class="mb-20">
-            <h3 class="card-title mb-20 h3 font-size-30">
-              Онлайн
-            </h3>
-            <div class="card-title-line"></div>
-          </div>
-          
-          <div class="pricing-features-wrapper">
-            
-            
-            <div class="pricing-features">
-              <span class="pricing-features-text">
-                Ежемесячный доступ к видео
-              </span>
-            </div>
-            
-            
-            
-            <div class="pricing-features">
-              <span class="pricing-features-text">
-                На вопросы ментор доступен
-              </span>
-            </div>
-            
-            
-            
-            <div class="pricing-features">
-              <span class="pricing-features-text">
-                Видео записывается
-              </span>
-            </div>
-            
-            
-            
-            <div class="pricing-features">
-              <span class="pricing-features-text">
-                Высокое качество записи
-              </span>
-            </div>
-            
-            
-            
-            <div class="pricing-features">
-              <span class="pricing-features-text">
-                Оплатите за 8 мес и будет в 2 раза дешевле
-              </span>
-            </div>
-            
-            
-          </div>
-        </div>
-        <div class="pricing-card-footer pt-40">
-          
-          <div class="button-full-width">
-            
-            
-            
-            
-            
-            <a class="button" href="https://www.hubsnacks.com/">
-              Buy Now
-               
-            </a>
-          </div>
-          
-        </div>
-      </div>
-    </div>
+
+    {% endfor %}
+
+    {% else %}
+
+     <h3 class="h3 card-title font-size-0">
+       На данный момент пусто
+     </h3>
+
+    {% endif %}
     
   </div>
 
@@ -934,55 +610,70 @@
 <section class="th-cta-1 ">
   <div class="flex flex--right-button">
     <div class="col">
-      
+
+      {% if offers_black %}
+
+      {% for offer_black in offers_black %}
+
       <div class="tagline-wrap mb-15">
         <div class="tagline secondary-color">
-          Why not
+          {{ offer_black.subtitle }}
         </div>
         
       </div>
-      
-
       
       <div class="heading-text">
         <h2>
         <span class="heading-type heading-color font-size-">
-          Choose the Best
+          {{ offer_black.title }}
         </span>
       </h2></div>
       <div class="heading-line"></div>
       
-
-      
       <div>
-        <p><span style="color: #ffffff;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</span></p>
+        <p><span style="color: #ffffff;">{{ offer_black.content }}</span></p>
       </div>
-      
+
+      <br>
+
+      {% endfor %}
+
+      {% else %}
+
+      <div class="heading-text">
+        <h2>
+        <span class="heading-type heading-color font-size-">
+          На данный момент пусто
+        </span>
+      </h2></div>
+      <div class="heading-line"></div>
+
+      {% endif %}
 
     </div>
     <div class="col text-phone-left">
+
+      {% for offer in offers %}
+
       <div class="description-content-wrap p-40 border-radius">
-        
+
         <div class="mb-30">
-          <h3>Try our freemium theme</h3><p>With advanced features of higher quality than other similar marketplace themes</p>
+          <h3>{{ offer.title }}</h3><p>{{ offer.content }}</p>
         </div>
-        
 
-        
         <div>
-          
-          
-          
-          
-          
-          <a class="button" href="https://484997.hs-sites.com/thrifty/book-meeting">
-            GET STARTED
-            
 
+          <a class="button" href="{{ offer.link }}">
+            GET STARTED
           </a>
         </div>
-        
+
       </div>
+
+      <br>
+
+      {% endfor %}
+
     </div>
   </div>
 </section></div>
@@ -1031,37 +722,37 @@
     
     <div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 480px; transform: translate3d(0px, 0px, 0px);"><div class="slide slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 240px;">
       <div class="slide-wrapper border-radius p-20">
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
         <img class="" src="{% static 'img/unnamed1.jpg' %}" alt="unnamed1" loading="lazy" width="223" height="209" srcset="https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/unnamed1.jpg?width=112&amp;height=105&amp;name=unnamed1.jpg 112w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/unnamed1.jpg?width=223&amp;height=209&amp;name=unnamed1.jpg 223w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/unnamed1.jpg?width=335&amp;height=314&amp;name=unnamed1.jpg 335w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/unnamed1.jpg?width=446&amp;height=418&amp;name=unnamed1.jpg 446w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/unnamed1.jpg?width=558&amp;height=523&amp;name=unnamed1.jpg 558w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/unnamed1.jpg?width=669&amp;height=627&amp;name=unnamed1.jpg 669w" sizes="(max-width: 223px) 100vw, 223px">
-        
-        
+
+
       </div>
     </div><div class="slide slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 240px;">
       <div class="slide-wrapper border-radius p-20">
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
         <img class="" src="{% static 'img/cropped-2.png' %}" alt="cropped-2" loading="lazy" width="512" height="512" srcset="https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/cropped-2.png?width=256&amp;height=256&amp;name=cropped-2.png 256w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/cropped-2.png?width=512&amp;height=512&amp;name=cropped-2.png 512w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/cropped-2.png?width=768&amp;height=768&amp;name=cropped-2.png 768w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/cropped-2.png?width=1024&amp;height=1024&amp;name=cropped-2.png 1024w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/cropped-2.png?width=1280&amp;height=1280&amp;name=cropped-2.png 1280w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/cropped-2.png?width=1536&amp;height=1536&amp;name=cropped-2.png 1536w" sizes="(max-width: 512px) 100vw, 512px">
-        
-        
+
+
       </div>
     </div></div></div>
     
-    
+
     
     
     

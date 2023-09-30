@@ -2,6 +2,9 @@ from django.contrib import admin
 
 from .models import *
 
+class FrontAdmin(admin.ModelAdmin):
+    pass
+
 admin.site.register(Front)
 admin.site.register(Datasets)
 admin.site.register(Statistics)
