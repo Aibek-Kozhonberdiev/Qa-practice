@@ -51,7 +51,7 @@
 
 
 
-  <span id="hs_cos_wrapper_site_logo_hs_logo_widget" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="https://t.me/lemexplain" target="_blank" id="hs-link-site_logo_hs_logo_widget" rel="noopener" style="border-width:0px;border:0px;"><img src="{% static 'img/photo_2023-09-11_05-14-08.jpg' %}" class="hs-image-widget " height="50" style="height: auto;width:50px;border-width:0px;border:0px;" width="50" alt="photo_2023-09-11_05-14-08" title="photo_2023-09-11_05-14-08" loading="lazy" srcset="https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/photo_2023-09-11_05-14-08.jpg?width=25&amp;height=25&amp;name=photo_2023-09-11_05-14-08.jpg 25w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/photo_2023-09-11_05-14-08.jpg?width=50&amp;height=50&amp;name=photo_2023-09-11_05-14-08.jpg 50w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/photo_2023-09-11_05-14-08.jpg?width=75&amp;height=75&amp;name=photo_2023-09-11_05-14-08.jpg 75w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/photo_2023-09-11_05-14-08.jpg?width=100&amp;height=100&amp;name=photo_2023-09-11_05-14-08.jpg 100w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/photo_2023-09-11_05-14-08.jpg?width=125&amp;height=125&amp;name=photo_2023-09-11_05-14-08.jpg 125w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/photo_2023-09-11_05-14-08.jpg?width=150&amp;height=150&amp;name=photo_2023-09-11_05-14-08.jpg 150w" sizes="(max-width: 50px) 100vw, 50px"></a></span>
+  <span id="hs_cos_wrapper_site_logo_hs_logo_widget" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="{{ fronts.link }}" target="_blank" id="hs-link-site_logo_hs_logo_widget" rel="noopener" style="border-width:0px;border:0px;"><img src="{{ fronts.avatar.url }}" class="hs-image-widget " height="50" style="height: auto;width:50px;border-width:0px;border:0px;" width="50" alt="photo_2023-09-11_05-14-08" title="photo_2023-09-11_05-14-08" loading="lazy"></a></span>
 </div>
         </div>
         
@@ -104,7 +104,7 @@
     
     
     
-    <a class="button font-size-16" href="tel:18001234567">
+    <a class="button font-size-16" href="{{ fronts.menu }}">
       
       Меню
     </a>
@@ -166,7 +166,7 @@
     
     <div class="tagline-wrap mb-15">
       <div class="tagline secondary-color">
-        Let me Explain it!
+        {{ fronts.name }}
       </div>
       
       <!-- HTML to show when checked -->
@@ -179,7 +179,7 @@
     <div class="heading-text">
       <h1>
       <span class="heading-type heading-color font-size-60">
-        Курсы по подготовке к <strong>USMLE</strong>
+        {{ fronts.subtitle }} <strong>{{ fronts.title }}</strong>
       </span>
     </h1></div>
     <div class="heading-line"></div>
@@ -196,9 +196,9 @@
         
         
         
-        <a class="button" href="https://484997.hs-sites.com/thrifty/sectors">
+        <a class="button" href="{{ fronts.white_link_button }}">
 
-          Узнать по больше
+          {{ fronts.white_name_button }}
           
         </a>
       </div>
@@ -212,8 +212,8 @@
         
         
         
-        <a class="button" href="https://484997.hs-sites.com/thrifty/book-meeting">
-          Записаться на курсы
+        <a class="button" href="{{ fronts.black_link_button }}">
+          {{ fronts.black_name_button }}
           
         </a>
       </div>
@@ -413,7 +413,7 @@
 
           <div class="card-image border-radius">
 
-            <img src="{{ mentor.img.url }}" alt="1693830946802" loading="lazy" width="4667" height="7000" srcset="https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/1693830946802.jpg?width=2334&amp;height=3500&amp;name=1693830946802.jpg 2334w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/1693830946802.jpg?width=4667&amp;height=7000&amp;name=1693830946802.jpg 4667w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/1693830946802.jpg?width=7001&amp;height=10500&amp;name=1693830946802.jpg 7001w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/1693830946802.jpg?width=9334&amp;height=14000&amp;name=1693830946802.jpg 9334w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/1693830946802.jpg?width=11668&amp;height=17500&amp;name=1693830946802.jpg 11668w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/1693830946802.jpg?width=14001&amp;height=21000&amp;name=1693830946802.jpg 14001w" sizes="(max-width: 4667px) 100vw, 4667px">
+            <img src="{{ mentor.img.url }}" alt="1693830946802" loading="lazy" width="4667" height="7000" sizes="(max-width: 4667px) 100vw, 4667px">
           </div>
 
           <div class="pt-40">
@@ -713,52 +713,38 @@
     <h2>
     <span class="heading-type heading-color font-size-40">В благодраность</span>
   </h2></div>
+
+
   <div class="heading-line"></div>
-  
-  
-  
-  <div class="customer-logos slick-initialized slick-slider" id="customer-logos-dnd_area-module-10">
-    
-    
-    <div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 480px; transform: translate3d(0px, 0px, 0px);"><div class="slide slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 240px;">
-      <div class="slide-wrapper border-radius p-20">
 
+<div class="customer-logos slick-initialized slick-slider" id="customer-logos-dnd_area-module-10">
+  <div class="slick-list draggable">
+    <div class="slick-track" style="opacity: 1; width: 480px; transform: translate3d(0px, 0px, 0px);">
 
+      {% if gratitudes %}
 
+      {% for gratitude in gratitudes %}
 
-
-
-
-
-
-        <img class="" src="{% static 'img/unnamed1.jpg' %}" alt="unnamed1" loading="lazy" width="223" height="209" srcset="https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/unnamed1.jpg?width=112&amp;height=105&amp;name=unnamed1.jpg 112w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/unnamed1.jpg?width=223&amp;height=209&amp;name=unnamed1.jpg 223w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/unnamed1.jpg?width=335&amp;height=314&amp;name=unnamed1.jpg 335w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/unnamed1.jpg?width=446&amp;height=418&amp;name=unnamed1.jpg 446w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/unnamed1.jpg?width=558&amp;height=523&amp;name=unnamed1.jpg 558w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/unnamed1.jpg?width=669&amp;height=627&amp;name=unnamed1.jpg 669w" sizes="(max-width: 223px) 100vw, 223px">
-
-
+      <div class="slide slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 240px;">
+        <div class="slide-wrapper border-radius p-20">
+          <img class="" src="{{ gratitude.logo.url }}" alt="unnamed1" loading="lazy" width="223" height="209">
+        </div>
       </div>
-    </div><div class="slide slick-slide slick-active" data-slick-index="1" aria-hidden="false" style="width: 240px;">
-      <div class="slide-wrapper border-radius p-20">
 
+      {% endfor %}
 
+      {% else %}
 
+     <h4 class="h3 card-title font-size-0">
+       На данный момент пусто
+     </h4>
 
+      {% endif %}
 
-
-
-
-
-        <img class="" src="{% static 'img/cropped-2.png' %}" alt="cropped-2" loading="lazy" width="512" height="512" srcset="https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/cropped-2.png?width=256&amp;height=256&amp;name=cropped-2.png 256w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/cropped-2.png?width=512&amp;height=512&amp;name=cropped-2.png 512w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/cropped-2.png?width=768&amp;height=768&amp;name=cropped-2.png 768w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/cropped-2.png?width=1024&amp;height=1024&amp;name=cropped-2.png 1024w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/cropped-2.png?width=1280&amp;height=1280&amp;name=cropped-2.png 1280w, https://43808461.fs1.hubspotusercontent-na1.net/hub/43808461/hubfs/cropped-2.png?width=1536&amp;height=1536&amp;name=cropped-2.png 1536w" sizes="(max-width: 512px) 100vw, 512px">
-
-
-      </div>
-    </div></div></div>
-    
-
-    
-    
-    
-    
+    </div>
   </div>
-  
+</div>
+
   
   
 </section>
@@ -842,6 +828,7 @@
 </div><!--end row-wrapper -->
 
 </div><!--end widget-span -->
+
 <div class="span4 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="4" data-w="4">
 
 <div class="row-fluid-wrapper row-depth-1 row-number-7 dnd-row">

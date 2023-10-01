@@ -9,7 +9,7 @@ class IndexView(View):
 
     def get_context_data(self):
         context = {}
-        context['fronts'] = Front.objects.all()
+        context['fronts'] = Front.objects.get(pk=1)
         context['datasets'] = Datasets.objects.all()
         context['statistics'] = Statistics.objects.all()
         context['mentors'] = Mentors.objects.all()

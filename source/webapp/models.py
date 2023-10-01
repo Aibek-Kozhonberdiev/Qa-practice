@@ -18,7 +18,6 @@ class Front(models.Model):
     white_link_button = models.CharField(max_length=500)
     black_name_button = models.CharField(max_length=50)
     black_link_button = models.CharField(max_length=500)
-    test = models.CharField(max_length=2)
 
 class Datasets(models.Model):
     image = models.CharField(max_length=1000, choices=SVG_ICONS)
