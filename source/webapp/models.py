@@ -8,122 +8,132 @@ SVG_ICONS = (
 )
 
 class Front(models.Model):
-    avatar = models.ImageField(upload_to='avatar/')
-    link = models.CharField(max_length=500)
-    menu = models.CharField(max_length=500)
-    subtitle = models.CharField(max_length=100)
-    title = models.CharField(max_length=50)
-    name = models.CharField(max_length=50)
-    white_name_button = models.CharField(max_length=50)
-    white_link_button = models.CharField(max_length=500)
-    black_name_button = models.CharField(max_length=50)
-    black_link_button = models.CharField(max_length=500)
+    id = models.AutoField(primary_key=True, unique=True)
+    avatar = models.ImageField(upload_to='avatar/', verbose_name='Иконка вашего лички')
+    link = models.CharField(max_length=500, verbose_name='Ссылка вашего лички')
+    menu = models.CharField(max_length=500, verbose_name='Ссылка для меню')
+    subtitle = models.CharField(max_length=100, verbose_name='Текст в белом цвете')
+    title = models.CharField(max_length=50, verbose_name='Название')
+    name = models.CharField(max_length=50, verbose_name='Текст в красном')
+    white_name_button = models.CharField(max_length=50, verbose_name='Белая кнопка')
+    white_link_button = models.CharField(max_length=500, verbose_name='Ссылка белой кнопки')
+    black_name_button = models.CharField(max_length=50, verbose_name='Черная кнопка')
+    black_link_button = models.CharField(max_length=500, verbose_name='Ссылка черной кнопки')
 
     class Meta:
-        pass
+        verbose_name = "Передний план"
+        verbose_name_plural = "Передний план"
 
     def __str__(self):
         return self.title
 
 class Datasets(models.Model):
-    image = models.CharField(max_length=1000, choices=SVG_ICONS)
-    title = models.CharField(max_length=150)
-    content = models.TextField(max_length=300)
-    link = models.CharField(max_length=500)
+    image = models.CharField(max_length=1000, choices=SVG_ICONS, verbose_name='Изображение')
+    title = models.CharField(max_length=150, verbose_name='Заголовок')
+    content = models.TextField(max_length=300, verbose_name='Содержание')
+    link = models.CharField(max_length=500, verbose_name='Ссылка')
 
     class Meta:
-        pass
+        verbose_name = "Наборы данных"
+        verbose_name_plural = "Наборы данных"
 
     def __str__(self):
         return self.title
 
 class Statistics(models.Model):
-    numbers = models.IntegerField()
-    title = models.CharField(max_length=100)
+    numbers = models.IntegerField(verbose_name='Число')
+    title = models.CharField(max_length=100, verbose_name='Заголовок')
 
     class Meta:
-        pass
+        verbose_name = "Статистика"
+        verbose_name_plural = "Статистики"
 
     def __str__(self):
         return self.title
 
 class Mentors(models.Model):
-    img = models.ImageField(upload_to='portrait/')
-    full_name = models.CharField(max_length=100)
-    description = models.CharField(max_length=100)
-    description_2 = models.CharField(max_length=100)
-    link = models.CharField(max_length=500)
+    img = models.ImageField(upload_to='portrait/', verbose_name='Изображение')
+    full_name = models.CharField(max_length=100, verbose_name='Полное имя')
+    description = models.CharField(max_length=100, verbose_name='Описание')
+    description_2 = models.CharField(max_length=100, verbose_name='Описание 2')
+    link = models.CharField(max_length=500, verbose_name='Ссылка')
 
     class Meta:
-        pass
+        verbose_name = "Наставник"
+        verbose_name_plural = "Наставники"
 
     def __str__(self):
-        return self.title
+        return self.full_name
 
 class Courses(models.Model):
-    course_type = models.CharField(max_length=60, null=True, blank=True)
-    price = models.CharField(max_length=50)
-    content = models.TextField(max_length=100)
-    title = models.CharField(max_length=50)
-    fact_1 = models.CharField(max_length=50)
-    fact_2 = models.CharField(max_length=50)
-    fact_3 = models.CharField(max_length=50)
-    fact_4 = models.CharField(max_length=50)
-    fact_5 = models.CharField(max_length=50)
-    link = models.CharField(max_length=500)
+    course_type = models.CharField(max_length=60, null=True, blank=True, verbose_name='Тип курса')
+    price = models.CharField(max_length=50, verbose_name='Цена')
+    content = models.TextField(max_length=100, verbose_name='Содержание')
+    title = models.CharField(max_length=50, verbose_name='Заголовок')
+    fact_1 = models.CharField(max_length=50, verbose_name='Подзаголовок')
+    fact_2 = models.CharField(max_length=50, verbose_name='Подзаголовок 2')
+    fact_3 = models.CharField(max_length=50, verbose_name='Подзаголовок 3')
+    fact_4 = models.CharField(max_length=50, verbose_name='Подзаголовок 4')
+    fact_5 = models.CharField(max_length=50, verbose_name='Подзаголовок 5')
+    link = models.CharField(max_length=500, verbose_name='Ссылка')
 
     class Meta:
-        pass
+        verbose_name = "Курс"
+        verbose_name_plural = "Курсы"
 
     def __str__(self):
         return self.title
 
 class OffersBlack(models.Model):
-    subtitle = models.CharField(max_length=50)
-    title = models.CharField(max_length=100)
-    content = models.TextField(max_length=200)
+    subtitle = models.CharField(max_length=50, verbose_name='Субтитры')
+    title = models.CharField(max_length=100, verbose_name='Название')
+    content = models.TextField(max_length=200, verbose_name='Содержание')
 
     class Meta:
-        pass
+        verbose_name = "Черные предложения"
+        verbose_name_plural = "Черные предложении"
 
     def __str__(self):
         return self.title
 
 class Offers(models.Model):
-    title = models.CharField(max_length=35)
-    content = models.TextField(max_length=100)
-    link = models.CharField(max_length=500)
+    title = models.CharField(max_length=35, verbose_name='Название')
+    content = models.TextField(max_length=100, verbose_name='Содержание')
+    link = models.CharField(max_length=500, verbose_name='Ссылка')
 
     class Meta:
-        pass
+        verbose_name = "Предложения"
+        verbose_name_plural = "Предложении"
 
     def __str__(self):
         return self.title
 
 class Gratitude(models.Model):
-    logo = models.ImageField(upload_to='logo/')
+    logo = models.ImageField(upload_to='logo/', verbose_name='Изображение')
 
     class Meta:
-        pass
+        verbose_name = "Благодарность"
+        verbose_name_plural = "Благодарности"
 
     def __str__(self):
-        return self.logo
+        return f"Изображение: {self.pk}"
 
 class Speakers(models.Model):
-    title = models.CharField(max_length=40)
-    offer_1 = models.TextField(max_length=100)
-    offer_2 = models.TextField(max_length=100, blank=True, null=True)
-    offer_3 = models.TextField(max_length=100, blank=True, null=True)
-    offer_4 = models.TextField(max_length=100, blank=True, null=True)
-    offer_5 = models.TextField(max_length=100, blank=True, null=True)
-    offer_6 = models.TextField(max_length=100, blank=True, null=True)
-    offer_7 = models.TextField(max_length=100, blank=True, null=True)
-    offer_8 = models.TextField(max_length=100, blank=True, null=True)
-    offer_9 = models.TextField(max_length=100, blank=True, null=True)
-    offer_10 = models.TextField(max_length=100, blank=True, null=True)
+    title = models.CharField(max_length=40, verbose_name='Название')
+    offer_1 = models.TextField(max_length=100, verbose_name='Предложение')
+    offer_2 = models.TextField(max_length=100, blank=True, null=True, verbose_name='Предложение 2')
+    offer_3 = models.TextField(max_length=100, blank=True, null=True, verbose_name='Предложение 3')
+    offer_4 = models.TextField(max_length=100, blank=True, null=True, verbose_name='Предложение 4')
+    offer_5 = models.TextField(max_length=100, blank=True, null=True, verbose_name='Предложение 5')
+    offer_6 = models.TextField(max_length=100, blank=True, null=True, verbose_name='Предложение 6')
+    offer_7 = models.TextField(max_length=100, blank=True, null=True, verbose_name='Предложение 7')
+    offer_8 = models.TextField(max_length=100, blank=True, null=True, verbose_name='Предложение 8')
+    offer_9 = models.TextField(max_length=100, blank=True, null=True, verbose_name='Предложение 9')
+    offer_10 = models.TextField(max_length=100, blank=True, null=True, verbose_name='Предложение 10')
 
     class Meta:
-        pass
+        verbose_name = "Динамик"
+        verbose_name_plural = "Динамики"
 
     def __str__(self):
         return self.title
