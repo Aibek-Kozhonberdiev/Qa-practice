@@ -19,15 +19,33 @@ class Front(models.Model):
     black_name_button = models.CharField(max_length=50)
     black_link_button = models.CharField(max_length=500)
 
+    class Meta:
+        pass
+
+    def __str__(self):
+        return self.title
+
 class Datasets(models.Model):
     image = models.CharField(max_length=1000, choices=SVG_ICONS)
     title = models.CharField(max_length=150)
     content = models.TextField(max_length=300)
     link = models.CharField(max_length=500)
 
+    class Meta:
+        pass
+
+    def __str__(self):
+        return self.title
+
 class Statistics(models.Model):
     numbers = models.IntegerField()
     title = models.CharField(max_length=100)
+
+    class Meta:
+        pass
+
+    def __str__(self):
+        return self.title
 
 class Mentors(models.Model):
     img = models.ImageField(upload_to='portrait/')
@@ -35,6 +53,12 @@ class Mentors(models.Model):
     description = models.CharField(max_length=100)
     description_2 = models.CharField(max_length=100)
     link = models.CharField(max_length=500)
+
+    class Meta:
+        pass
+
+    def __str__(self):
+        return self.title
 
 class Courses(models.Model):
     course_type = models.CharField(max_length=60, null=True, blank=True)
@@ -48,18 +72,42 @@ class Courses(models.Model):
     fact_5 = models.CharField(max_length=50)
     link = models.CharField(max_length=500)
 
+    class Meta:
+        pass
+
+    def __str__(self):
+        return self.title
+
 class OffersBlack(models.Model):
     subtitle = models.CharField(max_length=50)
     title = models.CharField(max_length=100)
     content = models.TextField(max_length=200)
+
+    class Meta:
+        pass
+
+    def __str__(self):
+        return self.title
 
 class Offers(models.Model):
     title = models.CharField(max_length=35)
     content = models.TextField(max_length=100)
     link = models.CharField(max_length=500)
 
+    class Meta:
+        pass
+
+    def __str__(self):
+        return self.title
+
 class Gratitude(models.Model):
     logo = models.ImageField(upload_to='logo/')
+
+    class Meta:
+        pass
+
+    def __str__(self):
+        return self.logo
 
 class Speakers(models.Model):
     title = models.CharField(max_length=40)
@@ -73,4 +121,10 @@ class Speakers(models.Model):
     offer_8 = models.TextField(max_length=100, blank=True, null=True)
     offer_9 = models.TextField(max_length=100, blank=True, null=True)
     offer_10 = models.TextField(max_length=100, blank=True, null=True)
+
+    class Meta:
+        pass
+
+    def __str__(self):
+        return self.title
 

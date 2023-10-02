@@ -23,3 +23,6 @@ class IndexView(View):
     def get(self, request):
         context = self.get_context_data()
         return render(request, self.template_name, context)
+
+def page_not_found_view(request, exception):
+    return render(request, 'errors/404.html', status=404)
