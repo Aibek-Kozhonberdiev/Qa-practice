@@ -9,7 +9,10 @@ class IndexView(View):
 
     def get_context_data(self):
         context = {}
-        context['fronts'] = Front.objects.get(pk=1)
+        try:
+            context['fronts'] = Front.objects.get(pk=1)
+        except Front.DoesNotExist:
+            context['fronts'] = None
         context['datasets'] = Datasets.objects.all()
         context['statistics'] = Statistics.objects.all()
         context['mentors'] = Mentors.objects.all()
