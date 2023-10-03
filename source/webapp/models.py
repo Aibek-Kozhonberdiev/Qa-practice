@@ -34,7 +34,7 @@ class Datasets(models.Model):
     link = models.CharField(max_length=500, verbose_name='Ссылка')
 
     class Meta:
-        verbose_name = "Наборы данных"
+        verbose_name = "Набор данных"
         verbose_name_plural = "Наборы данных"
 
     def __str__(self):
@@ -45,7 +45,7 @@ class Statistics(models.Model):
     title = models.CharField(max_length=100, verbose_name='Заголовок')
 
     class Meta:
-        verbose_name = "Статистика"
+        verbose_name = "Статистику"
         verbose_name_plural = "Статистики"
 
     def __str__(self):
@@ -59,7 +59,7 @@ class Mentors(models.Model):
     link = models.CharField(max_length=500, verbose_name='Ссылка')
 
     class Meta:
-        verbose_name = "Наставник"
+        verbose_name = "Наставника"
         verbose_name_plural = "Наставники"
 
     def __str__(self):
@@ -90,7 +90,7 @@ class OffersBlack(models.Model):
     content = models.TextField(max_length=200, verbose_name='Содержание')
 
     class Meta:
-        verbose_name = "Черные предложения"
+        verbose_name = "предложение"
         verbose_name_plural = "Черные предложении"
 
     def __str__(self):
@@ -102,7 +102,7 @@ class Offers(models.Model):
     link = models.CharField(max_length=500, verbose_name='Ссылка')
 
     class Meta:
-        verbose_name = "Предложения"
+        verbose_name = "предложение"
         verbose_name_plural = "Предложении"
 
     def __str__(self):
@@ -112,7 +112,7 @@ class Gratitude(models.Model):
     logo = models.ImageField(upload_to='logo/', verbose_name='Изображение')
 
     class Meta:
-        verbose_name = "Благодарность"
+        verbose_name = "Картинку"
         verbose_name_plural = "Благодарности"
 
     def __str__(self):
@@ -120,16 +120,26 @@ class Gratitude(models.Model):
 
 class Speakers(models.Model):
     title = models.CharField(max_length=40, verbose_name='Название')
-    offer_1 = models.TextField(max_length=100, verbose_name='Предложение')
-    offer_2 = models.TextField(max_length=100, blank=True, null=True, verbose_name='Предложение 2')
-    offer_3 = models.TextField(max_length=100, blank=True, null=True, verbose_name='Предложение 3')
-    offer_4 = models.TextField(max_length=100, blank=True, null=True, verbose_name='Предложение 4')
-    offer_5 = models.TextField(max_length=100, blank=True, null=True, verbose_name='Предложение 5')
-    offer_6 = models.TextField(max_length=100, blank=True, null=True, verbose_name='Предложение 6')
-    offer_7 = models.TextField(max_length=100, blank=True, null=True, verbose_name='Предложение 7')
-    offer_8 = models.TextField(max_length=100, blank=True, null=True, verbose_name='Предложение 8')
-    offer_9 = models.TextField(max_length=100, blank=True, null=True, verbose_name='Предложение 9')
-    offer_10 = models.TextField(max_length=100, blank=True, null=True, verbose_name='Предложение 10')
+    offer_1 = models.CharField(max_length=100, verbose_name='Предложение')
+    link_1 = models.CharField(max_length=50, verbose_name='ссылка')
+    offer_2 = models.CharField(max_length=100, blank=True, null=True, verbose_name='Предложение 2')
+    link_2 = models.CharField(max_length=50, verbose_name='ссылка', blank=True, null=True)
+    offer_3 = models.CharField(max_length=100, blank=True, null=True, verbose_name='Предложение 3')
+    link_3 = models.CharField(max_length=50, verbose_name='ссылка', blank=True, null=True)
+    offer_4 = models.CharField(max_length=100, blank=True, null=True, verbose_name='Предложение 4')
+    link_4 = models.CharField(max_length=50, verbose_name='ссылка', blank=True, null=True)
+    offer_5 = models.CharField(max_length=100, blank=True, null=True, verbose_name='Предложение 5')
+    link_5 = models.CharField(max_length=50, verbose_name='ссылка', blank=True, null=True)
+    offer_6 = models.CharField(max_length=100, blank=True, null=True, verbose_name='Предложение 6')
+    link_6 = models.CharField(max_length=50, verbose_name='ссылка', blank=True, null=True)
+    offer_7 = models.CharField(max_length=100, blank=True, null=True, verbose_name='Предложение 7')
+    link_7 = models.CharField(max_length=50, verbose_name='ссылка', blank=True, null=True)
+    offer_8 = models.CharField(max_length=100, blank=True, null=True, verbose_name='Предложение 8')
+    link_8 = models.CharField(max_length=50, verbose_name='ссылка', blank=True, null=True)
+    offer_9 = models.CharField(max_length=100, blank=True, null=True, verbose_name='Предложение 9')
+    link_9 = models.CharField(max_length=50, verbose_name='ссылка', blank=True, null=True)
+    offer_10 = models.CharField(max_length=100, blank=True, null=True, verbose_name='Предложение 10')
+    link_10 = models.CharField(max_length=50, verbose_name='ссылка', blank=True, null=True)
 
     class Meta:
         verbose_name = "Динамик"
@@ -137,4 +147,3 @@ class Speakers(models.Model):
 
     def __str__(self):
         return self.title
-

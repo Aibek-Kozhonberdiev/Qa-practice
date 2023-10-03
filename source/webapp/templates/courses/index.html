@@ -799,9 +799,11 @@
 <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
 <div id="hs_cos_wrapper_footer-module-6" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-header" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
 
+  {% if speakers %}
 
+{% for speaker in speakers %}
 
-<span id="hs_cos_wrapper_footer-module-6_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_header" style="" data-hs-cos-general-type="widget" data-hs-cos-type="header"><h3>Pages</h3></span></div>
+<span id="hs_cos_wrapper_footer-module-6_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_header" style="" data-hs-cos-general-type="widget" data-hs-cos-type="header"><h3>{{ speaker.title }}</h3></span></div>
 
 </div><!--end widget-span -->
 </div><!--end row-->
@@ -812,14 +814,14 @@
 <div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
 <div id="hs_cos_wrapper_footer-module-7" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-simple_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footer-module-7_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_simple_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="simple_menu"><div id="hs_menu_wrapper_footer-module-7_" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-vertical" role="navigation" data-sitemap-name="" data-menu-id="" aria-label="Navigation Menu">
  <ul role="menu">
-  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">Home</a></li>
-  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">About</a></li>
-  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">Services</a></li>
-  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">Pillar</a></li>
-  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">Content Download</a></li>
-  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">Blog</a></li>
-  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">Pricing</a></li>
-  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">Contact</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="{{ speaker.link_1 }}" role="menuitem" target="_self">{{ speaker.offer_1 }}</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="{{ speaker.link_2 | default_if_none:"#" }}" role="menuitem" target="_self">{{ speaker.offer_2 | default_if_none:"" }}</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="{{ speaker.link_3 | default_if_none:"#" }}" role="menuitem" target="_self">{{ speaker.offer_3 | default_if_none:"" }}</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="{{ speaker.link_4 | default_if_none:"#" }}" role="menuitem" target="_self">{{ speaker.offer_4 | default_if_none:"" }}</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="{{ speaker.link_5 | default_if_none:"#" }}" role="menuitem" target="_self">{{ speaker.offer_5 | default_if_none:"" }}</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="{{ speaker.link_6 | default_if_none:"#" }}" role="menuitem" target="_self">{{ speaker.offer_6 | default_if_none:"" }}</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="{{ speaker.link_7 | default_if_none:"#" }}" role="menuitem" target="_self">{{ speaker.offer_7 | default_if_none:"" }}</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="{{ speaker.link_8 | default_if_none:"#" }}" role="menuitem" target="_self">{{ speaker.offer_8 | default_if_none:"" }}</a></li>
  </ul>
 </div></span></div>
 
@@ -827,74 +829,15 @@
 </div><!--end row-->
 </div><!--end row-wrapper -->
 
-</div><!--end widget-span -->
+{% endfor %}
 
-<div class="span4 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="4" data-w="4">
-
-<div class="row-fluid-wrapper row-depth-1 row-number-7 dnd-row">
-<div class="row-fluid ">
-<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
-<div id="hs_cos_wrapper_footer-module-9" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-header" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
-
-
-
-<span id="hs_cos_wrapper_footer-module-9_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_header" style="" data-hs-cos-general-type="widget" data-hs-cos-type="header"><h4>Blog</h4></span></div>
+  {% else %}
 
 </div><!--end widget-span -->
 </div><!--end row-->
 </div><!--end row-wrapper -->
 
-<div class="row-fluid-wrapper row-depth-1 row-number-8 footer-column-8-row-1-margin dnd-row">
-<div class="row-fluid ">
-<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
-<div id="hs_cos_wrapper_footer-module-10" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-simple_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footer-module-10_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_simple_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="simple_menu"><div id="hs_menu_wrapper_footer-module-10_" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-vertical" role="navigation" data-sitemap-name="" data-menu-id="" aria-label="Navigation Menu">
- <ul role="menu">
-  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">Blog Listing</a></li>
-  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">Blog Post</a></li>
-  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">Blog Author</a></li>
-  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">Case Studies</a></li>
-  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">Case Study</a></li>
- </ul>
-</div></span></div>
-
-</div><!--end widget-span -->
-</div><!--end row-->
-</div><!--end row-wrapper -->
-
-</div><!--end widget-span -->
-<div class="span4 widget-span widget-type-cell dnd-column" style="" data-widget-type="cell" data-x="8" data-w="4">
-
-<div class="row-fluid-wrapper row-depth-1 row-number-9 dnd-row">
-<div class="row-fluid ">
-<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
-<div id="hs_cos_wrapper_footer-module-12" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-header" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
-
-
-
-<span id="hs_cos_wrapper_footer-module-12_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_header" style="" data-hs-cos-general-type="widget" data-hs-cos-type="header"><h4>Contact</h4></span></div>
-
-</div><!--end widget-span -->
-</div><!--end row-->
-</div><!--end row-wrapper -->
-
-<div class="row-fluid-wrapper row-depth-1 row-number-10 footer-column-11-row-1-margin dnd-row">
-<div class="row-fluid ">
-<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
-<div id="hs_cos_wrapper_footer-module-13" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-simple_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footer-module-13_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_simple_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="simple_menu"><div id="hs_menu_wrapper_footer-module-13_" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-vertical" role="navigation" data-sitemap-name="" data-menu-id="" aria-label="Navigation Menu">
- <ul role="menu">
-  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">404 Error</a></li>
-  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">500 Error</a></li>
-  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">Email subscription preferences</a></li>
-  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">Unsubscribe backup pages</a></li>
-  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">Subscription update confirmation</a></li>
-  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">Password Prompt</a></li>
-  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="javascript:void(0);" role="menuitem" target="_self">Search Results</a></li>
- </ul>
-</div></span></div>
-
-</div><!--end widget-span -->
-</div><!--end row-->
-</div><!--end row-wrapper -->
+  {% endif %}
 
 </div><!--end widget-span -->
 </div><!--end row-->
